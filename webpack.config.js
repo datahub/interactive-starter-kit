@@ -60,12 +60,7 @@ module.exports = {
                 loader: 'html',
             },
             {
-                test:   /\.json$/,
-                exclude: /node_modules/,
-                loader: 'json',
-            },
-            {
-                test: /\.(csv|tsv|txt)$/,
+                test: /\.(csv|tsv|txt|json)$/,
                 loader: 'file?name=data/[name].[ext]'
             },
             {
