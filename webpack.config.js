@@ -65,6 +65,10 @@ module.exports = {
                 loader: 'json',
             },
             {
+                test: /\.(csv|tsv|txt)$/,
+                loader: 'file?name=data/[name].[ext]'
+            },
+            {
                 test: /\.(jpe?g|png)$/,
                 loaders: [
                     'file?name=media/[name].[ext]',
