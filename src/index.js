@@ -2,6 +2,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 
 import './styles.scss';
+import './data/text.csv';
 
 import Template from './components/template';
 import data from './data/data.json';
