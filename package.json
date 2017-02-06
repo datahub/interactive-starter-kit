@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "dev": "webpack --progress --colors --dev",
-    "build": "NODE_ENV=production webpack"
+    "build": "NODE_ENV=production webpack",
+    "demo": "npm run build; node s3-upload.js"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,8 @@
     "html-loader": "^0.4.4",
     "image-webpack-loader": "^3.0.0",
     "node-sass": "^3.13.0",
+    "opn": "^4.0.2",
+    "s3": "^4.4.0",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
