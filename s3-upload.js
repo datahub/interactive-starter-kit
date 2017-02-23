@@ -5,7 +5,7 @@ var opn = require('opn');
 var appIndex = 'index.html';
 var appFolder = __dirname.split("/").pop();
 
-if (process.env.DATAHUB_S3_PROJECTS_ACCESS === 'undefined' && process.env.DATAHUB_S3_PROJECTS_SECRET === 'undefined') {
+if (process.env.DATAHUB_S3_PROJECTS_ACCESS === undefined && process.env.DATAHUB_S3_PROJECTS_SECRET === undefined) {
     console.log('You need S3 credentials to upload to the project server and create a demo.');
     process.exit(1);
 }
