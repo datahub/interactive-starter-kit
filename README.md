@@ -30,7 +30,7 @@ npm run build
 
 This will put the built version of the files in the `dist` folder.
 
-If you pulled this repo down, you'll probably want to remove it's reference to the starter kit repo and create a new repo for itself.
+If you pulled this repo down, you'll probably want to remove its reference to the starter kit repo and create a new repo for itself.
 ```
 rm -rf .git
 git init
