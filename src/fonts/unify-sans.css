@@ -1,0 +1,56 @@
+@media screen {
+    @font-face {
+        font-family: 'Unify Sans';
+        src: url(./unify-sans/EOT/UnifySans_W_Rg.eot);
+        src: url(./unify-sans/EOT/UnifySans_W_Rg.eot?#iefix) format("embedded-opentype"),
+             url(./unify-sans/WOFF/UnifySans_W_Rg.woff) format("woff"),
+             url(./unify-sans/WOFF2/UnifySans_W_Rg.woff2) format("woff2");
+        font-style: normal;
+        font-weight: normal;
+    }
+    @font-face {
+        font-family: 'Unify Sans';
+        src: url(./unify-sans/EOT/UnifySans_W_SBd.eot);
+        src: url(./unify-sans/EOT/UnifySans_W_SBd.eot?#iefix) format("embedded-opentype"),
+             url(./unify-sans/WOFF/UnifySans_W_SBd.woff) format("woff"),
+             url(./unify-sans/WOFF2/UnifySans_W_SBd.woff2) format("woff2");
+        font-style: normal; 
+        font-weight: 700;
+    }
+    @font-face {
+        font-family: 'Unify Sans';
+        src: url(./unify-sans/EOT/UnifySans_W_Bd.eot);
+        src: url(./unify-sans/EOT/UnifySans_W_Bd.eot?#iefix) format("embedded-opentype"),
+             url(./unify-sans/WOFF/UnifySans_W_Bd.woff) format("woff"),
+             url(./unify-sans/WOFF2/UnifySans_W_Bd.woff2) format("woff2");
+        font-style: normal;
+        font-weight: 900;
+    }
+    @font-face {
+        font-family: 'Unify Sans';
+        src: url(./unify-sans-italics/EOT/UnifySans_W_It.eot);
+        src: url(./unify-sans-italics/EOT/UnifySans_W_It.eot?#iefix) format("embedded-opentype"),
+             url(./unify-sans-italics/WOFF/UnifySans_W_It.woff) format("woff"),
+             url(./unify-sans-italics/WOFF2/UnifySans_W_It.woff2) format("woff2");
+        font-style: italic;
+        font-weight: normal;
+    }
+    @font-face {
+        font-family: 'Unify Sans';
+        src: url(./unify-sans-italics/EOT/UnifySans_W_SBdIt.eot);
+        src: url(./unify-sans-italics/EOT/UnifySans_W_SBdIt.eot?#iefix) format("embedded-opentype"),
+             url(./unify-sans-italics/WOFF/UnifySans_W_SBdIt.woff) format("woff"),
+             url(./unify-sans-italics/WOFF2/UnifySans_W_SBdIt.woff2) format("woff2");
+        font-style: italic;
+        font-weight: 700;
+    }
+    @font-face {
+        font-family: 'Unify Sans';
+        src: url(./unify-sans-italics/EOT/UnifySans_W_BdIt.eot);
+        src: url(./unify-sans-italics/EOT/UnifySans_W_BdIt.eot?#iefix) format("embedded-opentype"),
+             url(./unify-sans-italics/WOFF/UnifySans_W_BdIt.woff) format("woff"),
+             url(./unify-sans-italics/WOFF2/UnifySans_W_BdIt.woff2) format("woff2");
+        font-style: italic;
+        font-weight: 900;
+    }
+    }

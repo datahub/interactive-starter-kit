@@ -1,13 +1,10 @@
-import $ from 'jquery';
-import _ from 'lodash';
+import helloWorld from './components/hello-world';
 
-import './styles.scss';
-import './data/text.csv';
+// Remove fonts if this will be embedded on a page with
+// these fonts already loaded
+import './fonts/unify-sans.css';
+import './fonts/unify-serif.css';
 
-import Template from './components/template';
-import data from './data/data.json';
+import './style.scss';
 
-const hello = _.upperCase(data.hello);
-const template = new Template(hello);
-$('#app').append(template.render());
-
+document.body.appendChild(helloWorld());
