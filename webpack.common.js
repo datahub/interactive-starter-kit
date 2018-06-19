@@ -1,22 +1,28 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
-        index: './src/index.js'
+        main: ['babel-polyfill', './src/index.js']
     },
     plugins: [
-        new CleanWebpackPlugin(['dist'], {
-            exclude: ['static']
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/index.html',
-            filename: './index.html'
-        })
+        new CleanWebpackPlugin(['dist']),
+        new CopyWebpackPlugin([
+            {
+                from: './src/static',
+                to: './static'
+            },
+            {
+                from: './src/index.html',
+            }
+        ])
     ],
+    externals: {
+        jquery: 'jQuery'
+    },
     output: {
-        filename: 'bundle.js',
+        filename: 'js/bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     module: {
@@ -32,7 +38,10 @@ module.exports = {
                         }
                     },
                     {
-                        loader: 'eslint-loader'
+                        loader: 'eslint-loader',
+                        options: {
+                            emitWarning: true
+                        }
                     }
                 ]
             },
@@ -58,21 +67,25 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|svg|jpg|gif)$/,
-                use: [
-                    'file-loader'
-                ]
-            },
-            {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
                 use: [
-                    'file-loader'
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                outputPath: './fonts'
+                            }
+                        }
                 ]
             },
             {
                 test: /\.(csv|tsv)$/,
                 use: [
-                    'xml-loader'
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                outputPath: './data'
+                            }
+                        }
                 ]
             },
             {

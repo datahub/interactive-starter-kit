@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 import helloWorld from './components/hello-world';
 
 // Remove fonts if this will be embedded on a page with
@@ -7,4 +9,4 @@ import './fonts/unify-serif.css';
 
 import './style.scss';
 
-document.body.appendChild(helloWorld());
+$('body').append(helloWorld());
