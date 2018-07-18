@@ -1,10 +1,5 @@
-import helloWorld from './components/hello-world';
+import helloWorld from './js/hello-world';
 
-// Remove fonts if this will be embedded on a page with
-// these fonts already loaded
-import './fonts/unify-sans.css';
-import './fonts/unify-serif.css';
+import './index.scss';
 
-import './style.scss';
-
-document.body.appendChild(helloWorld());
+helloWorld('root');

@@ -1,0 +1,22 @@
+body {
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  max-width: 650px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+p {
+  line-height: 1.4;
+}
+
+#masthead {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  max-width: 200px;
+}

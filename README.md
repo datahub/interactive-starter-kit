@@ -1,7 +1,5 @@
 # Starter kit for interactives
 
-Before using this repo, consider using the [`generator-mjs-interactive`](https://github.com/datahub/generator-mjs-interactives) Yeoman generator. It lets you create this exact starter kit but has more options.
-
 This is a template for creating an interactive. It lets you do a few things out of the box:
 - Write ES6 code that gets converted to ES5
 - Use JavaScript modules
