@@ -12,7 +12,18 @@ This is a template for creating an interactive. It lets you do a few things out 
 
 ## Set up
 
-Install the development dependencies.
+First get the code from this repo on your computer.
+
+Some options:
+
+Use [degit](https://github.com/Rich-Harris/degit): `degit datahub/interactive-starter-kit`.
+
+Or pull down this repo and remove the `.git` folder: `git pull https://github.com/datahub/interactive-starter-kit && rm -rf .git`
+
+Or download this repo as a zip.
+
+Next you'll need to install the Node.js dependencies.
+
 ```
 npm install
 ```
@@ -28,57 +39,6 @@ When you're done developing and want to build it for production, run this.
 npm run build
 ```
 
-This will put the built version of the files in the `dist` folder.
-
-If you pulled this repo down, you'll probably want to remove its reference to the starter kit repo and create a new repo for itself.
-```
-rm -rf .git
-git init
-# etc ...
-```
-
-## Tips
-
-### Images
-To bring in an image, you'll need to import it in `src/index.js`. This will load
-the file into the build with a somewhat mutilated filename, something like `8as2d3g49jsdfij.png`. In the JavaScript, the imported object will be this
-filename, which can be used to refer to it in the script.
-```javascript
-import imageUrl from './media/image.png';
-
-var image = new Image();
-image.src = imageUrl;
-
-document.appendChild(image);
-```
-
-In CSS, you can refer directly to the image file path instead of the mutilated
-path.
-
-```css
-body {
-    background-image: url('./media/image.png');
-}
-```
-
-### Fonts
-
-This starter kit imports the Unify fonts, both serif and sans serif.
-
-```javascript
-import './fonts/unify-sans.css';
-import './fonts/unify-serif.css';
-```
-
-If the page where this interactive will live already has these fonts imported,
-you should remove these two lines. Or if you aren't using the serif font, for
-example, you should remove the line that imports it.
-
-### CSV, TSV and XML
-
-You can import CSV, TSV and XML files directly into a script.
-
-```javascript
-import table from './data/table.csv';
-import tree from './data/tree.xml';
-```
+This will put the built version of the files in the `dist` folder. This folder will
+have four elements: `index.html`, `index.js`, `index.css` and a `/static` folder that
+be a duplicate of the `src/static` folder.
