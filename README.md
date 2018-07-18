@@ -12,9 +12,7 @@ This is a template for creating an interactive. It lets you do a few things out 
 
 ## Set up
 
-First get the code from this repo on your computer.
-
-Some options:
+First get the code from this repo on your computer. Here are some options:
 
 Use [degit](https://github.com/Rich-Harris/degit): `degit datahub/interactive-starter-kit`.
 
