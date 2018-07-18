@@ -5,6 +5,7 @@ const WebpackMd5Hash = require('webpack-md5-hash');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: { main: './src/index.js' },
@@ -39,7 +40,15 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin('dist', {}),
+    new CleanWebpackPlugin(['dist'], {
+      exclude: ['static']
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: './src/static',
+        to: './static'
+      }
+    ]),
     new MiniCssExtractPlugin({
       filename: 'index.css'
     }),
@@ -52,7 +61,7 @@ module.exports = {
     new WebpackMd5Hash(),
     new StyleLintPlugin({
       configFile: './stylelint.config.js',
-      files: './src/scss/*.scss',
+      files: './src/**/*.scss',
       syntax: 'scss'
     })
   ]

@@ -1,14 +1,12 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Milwaukee Journal Sentinel - Milwaukee and Wisconsin breaking news and investigations</title>
-
+    <%= require('html-loader!./html/metadata.html') %>
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
-<body>
-    <div id="root"></div>
+<body data-content-byline="" data-content-cst="" data-content-ssts="">
+    <%= require('html-loader?attrs=img!./html/story.html') %>
+    <%= require('html-loader!./html/analytics.html') %>
     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 </html>

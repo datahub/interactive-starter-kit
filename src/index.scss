@@ -13,3 +13,10 @@ section {
 p {
   line-height: 1.4;
 }
+
+#masthead {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  max-width: 200px;
+}
