@@ -1,12 +1,10 @@
-import $ from 'jquery';
+import './scss/index.scss';
 
-import helloWorld from './components/hello-world';
+var root = document.getElementById('root');
 
-// Remove fonts if this will be embedded on a page with
-// these fonts already loaded
-import './fonts/unify-sans.css';
-import './fonts/unify-serif.css';
-
-import './style.scss';
-
-$('body').append(helloWorld());
+root.innerHTML = '' +
+    '<section>' +
+        '<p>' +
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut dui et nisi placerat faucibus in eget justo. Integer id elit leo. Proin accumsan tristique facilisis. Vestibulum at purus et turpis tempor bibendum vitae ac nibh. Fusce in hendrerit mauris.' +
+        '</p>' +
+    '</section>';
