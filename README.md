@@ -26,13 +26,13 @@ Next you'll need to install the Node.js dependencies.
 npm install
 ```
 
-When you're developing you can have it kick of a development server that watches to changes, rebuilds stuff and reloads your browser. Run this.
+When you're developing you can have it kick off a development server that watches to changes, rebuilds stuff and reloads your browser.
 
 ```
 npm start
 ```
 
-When you're done developing and want to build it for production, run this.
+When you're done developing, you create a production build of the files.
 ```
 npm run build
 ```
