@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   entry: { main: './src/index.js' },
@@ -64,5 +65,10 @@ module.exports = {
       files: './src/**/*.scss',
       syntax: 'scss'
     })
-  ]
+  ],
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin()
+    ]
+  }
 };
